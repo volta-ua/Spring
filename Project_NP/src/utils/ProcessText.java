@@ -7,13 +7,11 @@ public class ProcessText {
 		if (s==null){
 			return null;
 		}
-		String result;
-		result=s.replaceAll("[^0-9]", "");
-		System.out.println("processMobileInput\t"+result);
-		return result;
+		System.out.println(s.replaceAll("[^0-9]", ""));
+		return s.replaceAll("[^0-9]", "");
 	}
 
-	public static boolean mobileValidator(String s) {
+	public static boolean isMobileValid(String s) {
 		return true;
 //		System.out.println("mobileValidator\t\t"+s);
 //		if (s==null)

@@ -1,12 +1,12 @@
 package service;
 
-import model.ItemHolder;
+import model.ItemsHolder;
 
 public class Scheduler {
 	
-	private static ItemHolder itemHolder;
+	private static ItemsHolder itemHolder;
 	
-	Scheduler(ItemHolder itemHolder){
+	Scheduler(ItemsHolder itemHolder){
 		Scheduler.itemHolder=itemHolder;
 	}
 	

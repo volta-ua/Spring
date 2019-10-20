@@ -2,7 +2,7 @@ package processing;
 
 import dao.Connector;
 import model.Item;
-import model.ItemHolder;
+import model.ItemsHolder;
 
 public class Updater {
 

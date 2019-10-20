@@ -38,8 +38,8 @@ public class MobileController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String s= request.getParameter("mobile");
 		s=ProcessText.processMobileInput(s);
-		System.out.println(s+ProcessText.mobileValidator(s));		
-		if (ProcessText.mobileValidator(s)) {			
+		System.out.println(s+ProcessText.isMobileValid(s));		
+		if (ProcessText.isMobileValid(s)) {			
 			List<Item> items=Connector.retriveItemsByPhone(s);
 			int itemsSize=items.size();
 			System.out.println("item size: "+itemsSize);
