@@ -9,7 +9,7 @@
 
   <name>com.yet.spring.core</name>
   <url>http://maven.apache.org</url>
-
+  
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <spring.ver>3.2.13.RELEASE</spring.ver>
