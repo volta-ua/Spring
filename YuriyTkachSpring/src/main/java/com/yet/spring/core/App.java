@@ -28,9 +28,8 @@ public class App
 		for (int i=0;i<11;i++) {
 			app.logEvent(e);
 		}
-		
-		ctx.close();
-						
+				
+		ctx.close();				
     }
     
     public void logEvent(Event e) {
