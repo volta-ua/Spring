@@ -25,14 +25,16 @@
 		<constructor-arg ref="client"/>
 		<constructor-arg ref="casheFileEventLogger"/>
 	</bean>
-	
+	<!-- 
 	<bean id="event" class="com.yet.spring.core.Event" scope="prototype">
 		<constructor-arg>			
 			<bean class="java.util.Date"/>			
 		</constructor-arg>
 		<constructor-arg ref="dateFormat"/>	
 	</bean>
-	
+	 -->
+	 <import resource="additional.xml"/>
+	 
 	<bean id="dateFormat" class="java.text.DateFormat" factory-method="getDateTimeInstance"/>
 	
 </beans>
