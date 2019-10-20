@@ -17,19 +17,19 @@ public class App
 		this.eventLogger = eventLogger;
 	}
 
-	public static void main( String[] args )
+	public static void main( String[] args ) throws InterruptedException
     {
-		ConfigurableApplicationContext ctx=new ClassPathXmlApplicationContext("spring.xml");		
+		ApplicationContext ctx=new ClassPathXmlApplicationContext("spring.xml");		
 		
 		App app=(App)ctx.getBean("app");
-		Event e=(Event)ctx.getBean("event");
-		e.setMessage("Message is set manually");
-		
 		for (int i=0;i<11;i++) {
+			Event e=(Event)ctx.getBean("event");
+			e.setMessage("Message is set manually");
 			app.logEvent(e);
+			Thread.sleep(0);
 		}
-				
-		ctx.close();				
+		
+		((ClassPathXmlApplicationContext)ctx).close();			
     }
     
     public void logEvent(Event e) {

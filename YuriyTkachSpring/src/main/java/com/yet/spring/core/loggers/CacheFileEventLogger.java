@@ -26,10 +26,6 @@ public class CacheFileEventLogger extends FileEventLogger {
 	}
 	
 	private void writeEventsFromCashe() {
-		if (cashe.isEmpty()) {
-			System.out.println("cache is empty");
-			return;
-		}
 		for(Event event: cashe) {	
 			super.logEvent(event);
 		}
@@ -37,8 +33,8 @@ public class CacheFileEventLogger extends FileEventLogger {
 	}
 	
 	public void destroy() {
-		System.out.println("Starting destruction with ..."+cashe.size());
-		writeEventsFromCashe();
+		if (!cashe.isEmpty())
+			writeEventsFromCashe();
 		System.out.println("Destroyed ...");
 	}
 	

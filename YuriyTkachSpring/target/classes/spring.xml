@@ -13,12 +13,12 @@
 	<bean id="eventLogger" class="com.yet.spring.core.loggers.ConsoleEventLogger"/>	
 
 	<bean id="fileEventLogger" class="com.yet.spring.core.loggers.FileEventLogger" init-method="init">
-		<constructor-arg value="c://2.txt"/>
+		<constructor-arg value="log.txt"/>
 	</bean>
 	
-	<bean id="casheFileEventLogger" class="com.yet.spring.core.loggers.CacheFileEventLogger" destroy-method="destroy">
-		<constructor-arg value="c://2.txt"/>
-		<constructor-arg value="3"/>
+	<bean id="casheFileEventLogger" class="com.yet.spring.core.loggers.CacheFileEventLogger" destroy-method="destroy"
+		parent="fileEventLogger">
+		<constructor-arg value="2"/>
 	</bean>	
 
 	<bean id="app" class="com.yet.spring.core.App">
